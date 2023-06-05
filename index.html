@@ -16,7 +16,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            /* justify-content: center; */
             align-items: center;
             text-align: center;
         }
@@ -37,6 +37,7 @@
 }
 .content {
     z-index: 2;
+    height: 100vh;
 }
 #article {
   font-size: 16px;
@@ -239,8 +240,7 @@
         });
     
         const article = document.getElementById('article');
-        const fullContent = "Neveanet's P2P Cloud Infrastructure is an innovative technology that has the potential to revolutionize the internet landscape. \
-            The infrastructure enables every device to earn money for using apps and websites. The technology works by sending a piece of the website to store and share with others when a user visits a web property hosted on Neveanet. As the traffic to the website increases, the web hosting bills become cheaper, benefiting the website owners. However, the visitors to the website can also earn a digital dollar for their participation, which is updated every minute, providing real-time earnings.";
+        const fullContent = "Neveanet's P2P Cloud Infrastructure is an innovative technology that has the potential to revolutionize the internet landscape. The infrastructure enables every device to earn money for using apps and websites. The technology works by sending a piece of the website to store and share with others when a user visits a web property hosted on Neveanet. As the traffic to the website increases, the web hosting bills become cheaper, benefiting the website owners. However, the visitors to the website can also earn a digital dollar for their participation, which is updated every minute, providing real-time earnings.";
         const truncatedContent = fullContent.substring(0, 200) + '...';
         const readMore = '<a href="#" id="read-more">Continue</a>';
         article.innerHTML = truncatedContent + readMore;
