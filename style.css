@@ -13,7 +13,22 @@ html {
   left: 50%;
   width: 50% !important;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.651);
+  background-color: rgba(0, 0, 0, 0.822);
+  max-height: 90%;
+  overflow-y: scroll;
+}
+.pop-up::-webkit-scrollbar {
+  width: 6px;
+  margin-top: 100px;
+}
+
+.pop-up::-webkit-scrollbar-thumb {
+  background-color: #6AA72A;
+
+  background-color: #604f4f;
+  background-color: #c4c2ab;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 /* body {
@@ -702,4 +717,8 @@ section .col-narrow {
   border-radius: 10px;
   padding: 20px;
   width: 80%;
+}
+
+#app{
+  padding-top: 30px;
 }

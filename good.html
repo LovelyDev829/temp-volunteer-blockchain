@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Three.js Particle Test with Trails - Quantum Blockchain</title>
+    <style>
+        body {
+            margin: 0;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+        .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+#WebGL-output {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.content {
+    z-index: 2;
+}
+
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="Stats-output"></div>
+    <div id="WebGL-output"></div>
+<div class="content">
+    <h1>Digital Dollar Blockchain</h1>
+
+<h2>Revolutionizing Finance: Pioneering Integration with a Cutting-Edge Universe</h2>
+<p>The future of financial technology is being rewritten by the Digital Dollar Blockchain Corporation (DDBC), as it forges an innovative integration with an advanced universe. With an exceptional blockchain designed for superior security, transparency, and accessibility, we are revolutionizing digital transactions to be as straightforward as sending a text. Our prime offering, a digital counterpart of the USD, redefines the dynamics of digital currencies. This evolution of finance is amplified by a partnership with a groundbreaking universe.</p>
+
+<h2>Our Vision</h2>
+<p>We envision a future where digital currencies are commonplace, and financial transactions are as seamless as messaging. Leading this transformation, we prioritize high standards of regulatory compliance, risk mitigation, and security. We're not just creating a digital currency but building trust in an interconnected digital universe.</p>
+
+<h2>Our Blockchain: Unleashing Unique Features</h2>
+
+<p>The DDBC presents an open-market platform, characterized by its distinctive benefits. Notably, no tokens are owned by the platform proprietors, ensuring value is determined by user activities and decisions within the marketplace, free from concentrated ownership influence. Our nonprofit status further differentiates us, prioritizing user service over profit. This democratization of financial services enhances platform flexibility and strength through widespread participation.</p>
+
+<p>Our native token, Karma, offers a novel approach to transaction fee management. Instead of accruing costs, users earn Karma points, which are then used to offset transaction fees. Our platform's ability to interoperate across multiple blockchains provides a seamless user experience, enhancing security and flexibility of transactions.</p>
+
+<p>Our rigorous adherence to regulatory compliance, transparency, and careful approval procedures instill trust, a crucial attribute in the digital currency arena. By combining the benefits of blockchain technology with user-centric design, our platform offers an accessible, transparent, and unrestricted marketplace attractive to users looking to engage with digital currencies.</p>
+
+<h2>Our Commitment</h2>
+
+<p>Our commitment to a secure and transparent digital currency ecosystem is enforced through meticulous operational guidelines:</p>
+
+<p>Our digital counterpart to the USD is the only token existing on our blockchain, protecting against fraudulent activities.
+Collateral for all smart contracts is guaranteed, reducing default risk.
+All smart contracts undergo thorough audits, receive insurance, risk ratings, and are publicly displayed.
+Every contract contributes value to the ecosystem and network.
+Contracts can be private, but safety is assured during audits and smooth cross-chain communication is enabled.</p>
+
+<h2>Our Tokens</h2>
+
+<p>Our digital counterpart to the USD combines the stability of the US Dollar with the sophistication of blockchain technology. Fully collateralized and backed 1:1 with USD, it offers stability, transparency, and convenience. The funds are never overleveraged, and public API access to the Corporate Bank account ensures Fiat Balance matches the total supply at all times.</p>
+
+<p>Karma, our native token, is not buyable, sellable, or transferable but rewards active participants. It also serves as a transaction fee and provides VIP access to certain ecosystem benefits.</p>
+
+<p>Auditors and review committee members receive a portion of contract revenues, ensuring meticulous review and oversight. Contract failure results in penalties.</p>
+
+<h2>Experience Our Future Vision</h2>
+
+<p>We're privately live, offering a glimpse into the future through our platform, flawlessly integrated with an advanced network. Witness the future of digital currency today.</p>
+
+<h2>Testing Our Platform:</h2>
+
+<p>Step 1)
+Connect with an EVM Wallet:
+Initiate testing by connecting with an EVM Wallet using the details below:</p>
+
+<p>EVM RPC: https://ddbc.dev
+ChainID: 7777
+Token: Karma
+EVM Explorer: https://evm.explorer.ddbc.dev
+Connect with a Network Wallet:
+Use the information provided below to connect:
+
+RPC: http://3.137.200.25:26657
+Explorer: https://ibc.explorer.ddbc.dev</p>
+
+<p>Step 2)
+Go to https://frontend.ddbc.dev/login, link your wallet, and wait for 60 seconds.</p>
+
+<p>Step 3)
+KYC Part 1: For testing purposes, use the following command:
+curl -X POST "https://backend.ddbc.dev/api/v1/account/add/{address}
+Note: Substitute {address} with your wallet address. Alternatively, use https://reqbin.com/curl.</p>
+
+<p>Step 4)
+KYC Part 2: Visit http://kyc.ddbc.dev and complete the KYC process. Upon completion, you'll receive additional Karma. Ensure your web3 wallet is linked to the network, refresh the page, and it will sign in with MetaMask.</p>
+
+<p>Step 5)
+Now you're ready to transact with Karma. Each transaction rewards both sender and receiver with more Karma, ensuring sufficient balance to complete transactions.</p>
+
+<p>Step 6)
+Initiate a contract. But remember, transactions won't be allowed until you execute this command:
+curl -X POST "https://backend.ddbc.dev/api/v1/account/add/{contract}</p>
+    <h3>Establish a Connection with an EVM Wallet:</h3>
+    <p>Initiate your DDBC testing by connecting with an EVM Wallet using the details below:</p>
+    <ul>
+        <li>EVM RPC: https://ddbc.dev</li>
+        <li>ChainID: 7777</li>
+        <li>Token: Karma</li>
+        <li>EVM Explorer: https://evm.explorer.ddbc.dev</li>
+    </ul>
+    <!-- Continue with the rest of the steps, following the same format. -->
+</div>
+
+    <div id="Stats-output"></div>
+    <div id="WebGL-output"></div>
+    <script>
+        $(function () {
+            var stats = initStats();
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+            var webGLRenderer = new THREE.WebGLRenderer();
+            
+            webGLRenderer.setClearColor(new THREE.Color(0x000000, 1.0));
+            webGLRenderer.setSize(window.innerWidth, window.innerHeight);
+            webGLRenderer.shadowMapEnabled = true;
+
+            camera.position.x = -30;
+            camera.position.y = 40;
+            camera.position.z = 50;
+            camera.lookAt(new THREE.Vector3(10, 0, 0));
+
+            $("#WebGL-output").append(webGLRenderer.domElement);
+
+            var step = 0;
+            var knot;
+            var trails = [];  // Array for trails
+
+            var controls = new function () {
+                this.radius = 40;
+                this.tube = 28.2;
+                this.radialSegments = 600;
+                this.tubularSegments = 12;
+                this.p = 5;
+                this.q = 4;
+                this.heightScale = 4;
+                this.asParticles = true;
+                this.rotate = true;
+                this.trailLength = 10;  // Added a trail length control
+
+                this.redraw = function () {
+                    if (knot) scene.remove(knot);
+                    trails.forEach((trail) => scene.remove(trail));
+                    trails = [];
+                    
+                    var geom = new THREE.TorusKnotGeometry(controls.radius, controls.tube, Math.round(controls.radialSegments), Math.round(controls.tubularSegments), Math.round(controls.p), Math.round(controls.q), controls.heightScale);
+
+                    knot = controls.asParticles ? createParticleSystem(geom) : createMesh(geom);
+                    scene.add(knot);
+                };
+            }
+
+            var gui = new dat.GUI();
+            gui.add(controls, 'radius', 0, 40).onChange(controls.redraw);
+            gui.add(controls, 'tube', 0, 40).onChange(controls.redraw);
+            gui.add(controls, 'radialSegments', 0, 400).step(1).onChange(controls.redraw);
+            gui.add(controls, 'tubularSegments', 1, 20).step(1).onChange(controls.redraw);
+            gui.add(controls, 'p', 1, 10).step(1).onChange(controls.redraw);
+            gui.add(controls, 'q', 1, 15).step(1).onChange(controls.redraw);
+            gui.add(controls, 'heightScale', 0, 5).onChange(controls.redraw);
+            gui.add(controls, 'asParticles').onChange(controls.redraw);
+            gui.add(controls, 'rotate').onChange(controls.redraw);
+            gui.add(controls, 'trailLength', 1, 50).step(1).onChange(controls.redraw);  // Added GUI control for trail length
+            gui.close();
+
+            controls.redraw();
+            render();
+
+            function generateSprite() {
+                var canvas = document.createElement('canvas');
+                canvas.width = 16;
+                canvas.height = 16;
+
+                var context = canvas.getContext('2d');
+                var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
+                gradient.addColorStop(0, 'rgba(255,255,255,1)');
+                gradient.addColorStop(0.2, 'rgba(0,255,255,1)');
+                gradient.addColorStop(0.4, 'rgba(0,0,64,1)');
+                gradient.addColorStop(1, 'rgba(0,0,0,1)');
+
+                context.fillStyle = gradient;
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                var texture = new THREE.Texture(canvas);
+                texture.needsUpdate = true;
+                return texture;
+            }
+
+            function createParticleSystem(geom) {
+                var material = new THREE.ParticleBasicMaterial({
+                    color: 0xffffff,
+                    size: 3,
+                    transparent: true,
+                    blending: THREE.AdditiveBlending,
+                    map: generateSprite()
+                });
+
+                var system = new THREE.ParticleSystem(geom, material);
+                system.sortParticles = true;
+
+                geom.vertices.forEach((particle) => {
+                    var trailGeometry = new THREE.Geometry();
+                    for (var i = 0; i < controls.trailLength; i++) {
+                        trailGeometry.vertices.push(particle.clone());
+                    }
+                    var trailMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
+                    var trailLine = new THREE.Line(trailGeometry, trailMaterial);
+                    trails.push(trailLine);
+                    scene.add(trailLine);
+                });
+
+                return system;
+            }
+
+            function createMesh(geom) {
+                var meshMaterial = new THREE.MeshNormalMaterial({});
+                meshMaterial.side = THREE.DoubleSide;
+                var mesh = THREE.SceneUtils.createMultiMaterialObject(geom, [meshMaterial]);
+                return mesh;
+            }
+
+            function render() {
+                stats.update();
+
+                if (controls.rotate) {
+                    knot.rotation.y = step += 0.01;
+                }
+
+                trails.forEach((trail, i) => {
+                    trail.geometry.vertices.shift();
+                    trail.geometry.vertices.push(knot.geometry.vertices[i].clone());
+                    trail.geometry.verticesNeedUpdate = true;
+                });
+
+                requestAnimationFrame(render);
+                webGLRenderer.render(scene, camera);
+            }
+
+            function initStats() {
+                var stats = new Stats();
+                stats.setMode(0); 
+
+                stats.domElement.style.position = 'absolute';
+                stats.domElement.style.left = '0px';
+                stats.domElement.style.top = '0px';
+
+                $("#Stats-output").append(stats.domElement);
+
+                return stats;
+            }
+        });
+    </script>
+</body>
+</html>
